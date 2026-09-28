@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle Getuk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. LAYAR HOME -->
+    <div id="screen-home" class="screen center-screen">
+        <div class="title">Gelut Getuk</div>
+        <p style="margin-bottom: 30px; font-weight: bold;">Gelut 1v1, menang olih diskon kalah bayari!!</p>
+        <button class="btn-main" onclick="goToSelectScreen()">Mulai Game</button>
+    </div>
+
+    <!-- 2. LAYAR PILIH KARAKTER -->
+    <div id="screen-select" class="screen center-screen hidden">
+        <div class="title" id="select-title" style="font-size: 22px; color: #333; text-shadow: none;">Player 1, Pilih Jagoanmu!</div>
+        <div class="char-grid" id="char-grid"></div>
+    </div>
+
+    <!-- 3. LAYAR BATTLE -->
+    <div id="screen-battle" class="screen hidden">
+        <div class="hp-board">
+            <div class="hp-container"><div id="hp-bar-p1" class="hp-bar"></div><div id="hp-text-p1" class="hp-text">P1</div></div>
+            <div class="hp-container"><div id="hp-bar-p2" class="hp-bar"></div><div id="hp-text-p2" class="hp-text">P2</div></div>
+        </div>
+
+        <div class="arena">
+            <div id="player1" class="getuk-container"></div>
+            
+            <div id="hit-p1" class="hit-effect" style="left: 40px;">💥</div>
+            <div id="hit-p2" class="hit-effect" style="right: 40px;">💥</div>
+            
+            <div id="player2" class="getuk-container"></div>
+        </div>
+
+        <div class="controls">
+            <div id="status" class="status-text">Giliran: Player 1</div>
+            <div id="action-buttons"></div>
+        </div>
+
+        <!-- Popup Pemenang -->
+        <div id="popup">
+            <h2 id="winner-text">Menang!</h2>
+            <p>Dapat Diskon</p>
+            <div class="diskon" id="discount-code">GETUKDISKON20</div>
+            <button class="btn-main" style="font-size: 16px; padding: 10px 20px;" onclick="resetGame()">Main Lagi</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
